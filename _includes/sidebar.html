@@ -62,15 +62,15 @@
                 {% unless lang == site.active_lang %}
                   <li>
                     {% if lang == 'zh-tw' %}
-                      <a class="dropdown-item" href="/" data-lang="zh-tw">
+                      <a class="dropdown-item" href="{{ site.baseurl }}/" data-lang="zh-tw">
                         繁體中文
                       </a>
                     {% elsif lang == 'en' %}
-                      <a class="dropdown-item" href="/en/" data-lang="en">
+                      <a class="dropdown-item" href="{{ site.baseurl }}/en/" data-lang="en">
                         English
                       </a>
                     {% else %}
-                      <a class="dropdown-item" href="/{{ lang }}/" data-lang="{{ lang }}">
+                      <a class="dropdown-item" href="{{ site.baseurl }}/{{ lang }}/" data-lang="{{ lang }}">
                         {{ lang | upcase }}
                       </a>
                     {% endif %}
