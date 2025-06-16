@@ -155,6 +155,12 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
+# RSS Feed settings
+feed:
+  posts_limit: 20
+  excerpt_only: false
+  path: feed.xml
+
 paginate: 10
 
 # The base URL of your site
@@ -222,6 +228,9 @@ exclude:
 
 plugins:
   - jekyll-polyglot
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 jekyll-archives:
   enabled: [categories, tags]
