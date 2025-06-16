@@ -1,0 +1,130 @@
+/* Language Switcher Styles */
+.language-switcher-item {
+  /* 讓語言切換器跟其他nav-item一樣的樣式 */
+}
+
+.language-switcher {
+  padding: 0 0.75rem; /* 跟其他nav-link一樣的左右padding */
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    border: none !important;
+    background-color: transparent !important; /* 透明背景 */
+    color: var(--nav-cursor-color, #6c757d) !important;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem !important; /* 跟nav-link相同的padding */
+    width: 100%;
+    margin: 0;
+    border-radius: 0.375rem !important; /* 跟其他nav項目一樣的圓角 */
+    text-align: left !important;
+
+    &:hover {
+      background-color: transparent !important; /* light mode hover背景透明 */
+      color: #6c757d !important; /* light mode hover文字灰色 */
+    }
+
+    &:focus {
+      box-shadow: none !important;
+      background-color: transparent !important;
+      color: #6c757d !important;
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05) !important; /* 輕微的灰色背景 */
+      border: none !important;
+      color: #6c757d !important;
+    }
+
+    &::after {
+      margin-left: auto;
+    }
+  }
+
+  .dropdown-menu {
+    border: 1px solid var(--sidebar-border-color, rgba(255, 255, 255, 0.1));
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    background-color: var(--sidebar-bg, #1a1e23);
+    width: calc(100% - 1.5rem); /* 減去左右padding讓寬度一致 */
+    min-width: unset !important;
+    margin-left: 0.75rem; /* 對齊按鈕左邊 */
+    border-radius: 0.375rem; /* 跟按鈕一樣的圓角 */
+
+    .dropdown-item {
+      color: var(--nav-cursor-color, #6c757d);
+      padding: 0.375rem 0.75rem; /* 跟按鈕相同的padding */
+      transition: all 0.2s ease;
+      font-size: 0.875rem;
+      text-align: left;
+      border-radius: 0.25rem;
+
+      &:hover {
+        background-color: transparent !important; /* light mode hover背景透明 */
+        color: #6c757d !important; /* light mode hover文字灰色 */
+      }
+
+      &:active {
+        background-color: rgba(0, 0, 0, 0.05) !important; /* 輕微的灰色背景 */
+        color: #6c757d !important;
+      }
+    }
+  }
+}
+
+/* Dark mode樣式已經整合到主要樣式中，使用CSS變數自動適應 */
+
+/* Dark mode特殊樣式 */
+[data-mode="dark"] {
+  .language-switcher {
+    .dropdown-toggle {
+      &:hover {
+        background-color: var(--sidebar-hover-bg, rgba(255, 255, 255, 0.05)) !important;
+        color: var(--nav-cursor-hover-color, #ffffff) !important;
+      }
+
+      &:focus {
+        background-color: var(--sidebar-hover-bg, rgba(255, 255, 255, 0.05)) !important;
+        color: var(--nav-cursor-hover-color, #ffffff) !important;
+      }
+
+      &:active {
+        background-color: var(--sidebar-hover-bg, rgba(255, 255, 255, 0.1)) !important;
+        color: var(--nav-cursor-hover-color, #ffffff) !important;
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        &:hover {
+          background-color: var(--sidebar-hover-bg, rgba(255, 255, 255, 0.05)) !important;
+          color: var(--nav-cursor-hover-color, #ffffff) !important;
+        }
+
+        &:active {
+          background-color: var(--sidebar-hover-bg, rgba(255, 255, 255, 0.1)) !important;
+          color: var(--nav-cursor-hover-color, #ffffff) !important;
+        }
+      }
+    }
+  }
+}
+
+/* Animation for dropdown */
+.language-switcher .dropdown-menu.show {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
