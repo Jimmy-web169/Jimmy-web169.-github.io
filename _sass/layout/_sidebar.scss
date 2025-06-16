@@ -247,6 +247,34 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       }
     }
   } /* .sidebar-bottom */
+
+  /* Language Switcher in Sidebar */
+  .language-switcher-item {
+    .language-switcher {
+      .badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+        transition: all 0.2s ease;
+
+        &.bg-secondary {
+          background-color: var(--sidebar-btn-bg) !important;
+          color: var(--sidebar-btn-color) !important;
+          border: 1px solid var(--sidebar-border-color);
+
+          &:hover {
+            background-color: var(--sidebar-hover-bg) !important;
+            color: var(--sidebar-active-color) !important;
+            transform: translateY(-1px);
+          }
+        }
+
+        &.bg-primary {
+          background-color: var(--sidebar-active-color) !important;
+          color: var(--main-bg) !important;
+        }
+      }
+    }
+  }
 } /* #sidebar */
 
 [#{$sidebar-display}] {

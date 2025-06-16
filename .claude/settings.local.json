@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle install:*)",
+      "Bash(npm install)",
+      "Bash(bash:*)",
+      "Bash(pkill:*)",
+      "Bash(JEKYLL_ENV=production bundle exec jekyll build)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)"
+    ],
+    "deny": []
+  }
+}

@@ -22,7 +22,7 @@
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
         <a href="{{ '/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
+          <span>{{ site.data.locales[include.lang].tabs.home | default: "首頁" }}</span>
         </a>
       </li>
       <!-- the real tabs -->
@@ -30,13 +30,36 @@
         <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
-            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+            {% capture tab_name %}{{ tab.url | split: '/' | last }}{% endcapture %}
 
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+            <span>{{ site.data.locales[include.lang].tabs[tab_name] | default: tab.title }}</span>
           </a>
         </li>
         <!-- .nav-item -->
       {% endfor %}
+
+      <!-- Language Switcher -->
+      <li class="nav-item language-switcher-item mt-3">
+        <div class="language-switcher px-3">
+          <div class="mb-2">
+            <i class="fas fa-globe fa-fw me-2"></i>
+            <span class="text-muted small">{{ site.data.locales[include.lang].tabs.language | default: "語言" }}</span>
+          </div>
+          <div class="d-flex flex-wrap gap-1">
+            {% for lang in site.languages %}
+              {% if lang == site.active_lang %}
+                <span class="badge bg-primary small">
+                  {% if lang == 'zh-tw' %}中{% elsif lang == 'en' %}EN{% else %}{{ lang | upcase }}{% endif %}
+                </span>
+              {% else %}
+                <a href="{% if lang == 'zh-tw' %}/{% else %}/{{ lang }}/{% endif %}" class="badge bg-secondary text-decoration-none small">
+                  {% if lang == 'zh-tw' %}中{% elsif lang == 'en' %}EN{% else %}{{ lang | upcase }}{% endif %}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </li>
     </ul>
   </nav>
 
