@@ -1,9 +1,9 @@
 # GitHub Pages specific configuration
 # This file overrides _config.yml settings for GitHub Pages deployment
 
-# For GitHub Pages with repository name
+# For GitHub User Pages (username.github.io repository)
 url: "https://jimmy-web169.github.io"
-baseurl: "/jimmy-web169.-github.io"
+baseurl: ""
 
 # GitHub Pages environment
 environment: production
