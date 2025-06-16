@@ -2,6 +2,8 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+lang: zh-tw
+page_id: about
 ---
 
 ## 關於這個網站
