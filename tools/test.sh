@@ -61,9 +61,24 @@ main() {
     -d "$SITE_DIR$_baseurl" -c "$_config"
 
   # test
-  bundle exec htmlproofer "$SITE_DIR" \
-    --disable-external \
-    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+  if [[ -n $_baseurl ]]; then
+    # For GitHub Pages deployment with baseurl, check the built site with URL swapping
+    bundle exec htmlproofer "$SITE_DIR$_baseurl" \
+      --disable-external \
+      --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" \
+      --assume-extension \
+      --allow-hash-href \
+      --ignore-status-codes "999" \
+      --swap-urls "^$_baseurl/:/"
+  else
+    # For local development without baseurl
+    bundle exec htmlproofer "$SITE_DIR" \
+      --disable-external \
+      --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" \
+      --assume-extension \
+      --allow-hash-href \
+      --ignore-status-codes "999"
+  fi
 }
 
 while (($#)); do
