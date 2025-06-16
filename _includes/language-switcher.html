@@ -2,8 +2,18 @@
 <div class="language-switcher mt-4 mb-3">
   <h5 class="mb-2"><i class="fas fa-globe me-2"></i>語言 / Language</h5>
   <div class="d-flex flex-wrap gap-2">
+    {% assign current_lang = page.lang | default: site.lang | default: 'zh-tw' %}
+    {% assign current_path = page.url %}
+    
+    <!-- 判斷當前語言（適用於 GitHub Pages） -->
+    {% if current_path contains '/en/' or current_path == '/en' %}
+      {% assign current_lang = 'en' %}
+    {% else %}
+      {% assign current_lang = 'zh-tw' %}
+    {% endif %}
+    
     {% for lang in site.languages %}
-      {% if lang == site.active_lang %}
+      {% if lang == current_lang %}
         <span class="badge bg-primary">
           {% if lang == 'zh-tw' %}繁體中文{% elsif lang == 'en' %}English{% else %}{{ lang | upcase }}{% endif %}
         </span>

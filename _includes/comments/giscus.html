@@ -4,8 +4,17 @@
     const themeMapper = Theme.getThemeMapper('light', 'dark_dimmed');
     const initTheme = themeMapper[Theme.visualState];
 
-    // 動態語言設置：優先使用配置的語言，否則使用當前頁面語言
-    let lang = '{{ site.comments.giscus.lang | default: page.lang | default: site.active_lang | default: site.lang }}';
+    // 動態語言設置：通過 URL 路徑和頁面變數來判斷語言
+    let lang = '{{ site.comments.giscus.lang | default: page.lang | default: site.lang }}';
+    
+    // 從當前 URL 路徑判斷語言（適用於 GitHub Pages）
+    const currentPath = window.location.pathname;
+    if (currentPath.startsWith('/en/') || currentPath === '/en') {
+      lang = 'en';
+    } else if (currentPath === '/' || currentPath.startsWith('/posts/') || currentPath.startsWith('/categories/') || currentPath.startsWith('/tags/')) {
+      lang = 'zh-TW';
+    }
+    
     {%- comment -%} https://github.com/giscus/giscus/tree/main/locales {%- endcomment -%}
     // 語言代碼處理：支援 zh-tw, zh-cn, en 等
     if (lang === 'zh-tw' || lang === 'zh-TW') {
@@ -13,6 +22,9 @@
     } else if (lang.length > 2 && !lang.startsWith('zh')) {
       lang = lang.slice(0, 2);
     }
+    
+    // 調試輸出（可在開發時啟用）
+    // console.log('Detected language for Giscus:', lang, 'from path:', currentPath);
 
     let giscusAttributes = {
       src: 'https://giscus.app/client.js',

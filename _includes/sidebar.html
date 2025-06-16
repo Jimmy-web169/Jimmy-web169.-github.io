@@ -48,18 +48,25 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false">
               <span>
-                {% if site.active_lang == 'zh-tw' %}
+                {% assign current_page_lang = page.lang | default: site.lang | default: 'zh-tw' %}
+                {% if page.url contains '/en/' or page.url == '/en' %}
+                  {% assign current_page_lang = 'en' %}
+                {% else %}
+                  {% assign current_page_lang = 'zh-tw' %}
+                {% endif %}
+                
+                {% if current_page_lang == 'zh-tw' %}
                   繁體中文
-                {% elsif site.active_lang == 'en' %}
+                {% elsif current_page_lang == 'en' %}
                   English
                 {% else %}
-                  {{ site.active_lang | upcase }}
+                  {{ current_page_lang | upcase }}
                 {% endif %}
               </span>
             </button>
             <ul class="dropdown-menu w-100" aria-labelledby="languageDropdown">
               {% for lang in site.languages %}
-                {% unless lang == site.active_lang %}
+                {% unless lang == current_page_lang %}
                   <li>
                     {% if lang == 'zh-tw' %}
                       <a class="dropdown-item" href="{{ site.baseurl }}/" data-lang="zh-tw">
