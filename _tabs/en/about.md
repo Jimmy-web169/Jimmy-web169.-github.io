@@ -5,30 +5,36 @@ order: 4
 lang: en
 page_id: about
 ---
+## About the Author
 
-## About This Website
-
-Welcome to my tech blog! This is where I share my programming experiences, technical learning insights, and project development records.
-
-### Website Features
-
-- 🌐 **Multi-language Support**: Supports Traditional Chinese and English
-- 🔍 **Full-text Search**: Quickly find content you're interested in
-- 🌓 **Dark Mode**: Eye-friendly reading experience
-- 📱 **Responsive Design**: Great experience on all devices
-- 🚀 **PWA Support**: Can be installed as a desktop application
-
-### About the Author
-
-I'm a technology-loving developer focused on frontend and backend development. I enjoy exploring new technologies and sharing my learning process and insights with everyone.
-
-### Contact
-
-If you have any questions or suggestions, feel free to contact me through:
-
-- GitHub: [Jimmy-web169](https://github.com/Jimmy-web169)
-- Email: [Contact Email]
+Hi, I’m **Jimmy**  
+From a **non-CS background** to becoming a **software engineer**
 
 ---
 
-{% include language-switcher.html %}
+> I believe the learning process begins with taking the first step,facing errors, diving deep, and iterating constantly to improve.
+
+---
+
+### The Era of Creativity
+
+The AI era has unlocked limitless possibilities. Suddenly, we can turn the ideas in our heads into real things.
+
+I think now is the best time to open your `terminal`!
+
+---
+
+#### The Future of Software Engineers
+
+Many worry that AI will replace software engineers, but I see it as **a new beginning**. We should embrace tools to increase our value.
+
+What remains essential is a solid understanding of core principles—and most importantly, a willingness to try.
+
+---
+
+#### Contact
+
+If you have any thoughts, suggestions, or interesting software you'd like me to share, feel free to reach out!  
+- 📧 Email: [letsopenterminal@gmail.com](mailto:letsopenterminal@gmail.com)
+
+---
