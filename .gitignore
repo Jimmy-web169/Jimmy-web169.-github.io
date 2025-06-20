@@ -22,3 +22,6 @@ node_modules
 !.vscode/tasks.json
 
 # Misc
+assets/img/posts/
+
+upload_to_r2.sh
