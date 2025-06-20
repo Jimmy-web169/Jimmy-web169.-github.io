@@ -105,13 +105,14 @@ theme_mode: # [light | dark]
 #
 # e.g. 'https://cdn.com'
 cdn:
+  https://lets-open-terminal.com
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /cute_terminal.png
+avatar: https://lets-open-terminal.com/img/posts/cute_terminal.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: /cute_terminal.png # string, local or CORS resources
+social_preview_image: https://lets-open-terminal.com/img/posts/cute_terminal.png # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
