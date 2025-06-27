@@ -36,5 +36,7 @@ What remains essential is a solid understanding of core principles—and most im
 
 If you have any thoughts, suggestions, or interesting software you'd like me to share, feel free to reach out!  
 - 📧 Email: [letsopenterminal@gmail.com](mailto:letsopenterminal@gmail.com)
+- ℹ️ If any content in the articles infringes on rights or is inappropriate, please notify me via email, and I will address it as soon as possible.
+- 💡 Tip: Don’t forget to subscribe to the RSS feed to get the latest updates!
 
 ---

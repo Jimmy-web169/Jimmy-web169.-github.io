@@ -35,5 +35,7 @@ AI 時代打開了任何可能性，突然之間，我們可以把腦袋裡的�
 
 如果您有任何想法或建議，或是有什麼有趣的軟體希望我能分享，歡迎隨時聯絡我！  
 - 📧 Email：[letsopenterminal@gmail.com](mailto:letsopenterminal@gmail.com)
+- ℹ️ 若文章內容有任何侵權或不當之處，請來信告知，我們將儘速處理。
+- 💡 小提示：別忘了訂閱 RSS feed 來獲取最新文章更新！
 
 ---
