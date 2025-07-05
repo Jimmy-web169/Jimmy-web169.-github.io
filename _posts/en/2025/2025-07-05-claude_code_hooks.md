@@ -1,7 +1,7 @@
 ---
 title: How to Send Telegram Notifications with Claude Code Hooks - Never Miss AI Task Completion Again!
 date: 2025-07-05 15:00:00 +0800
-categories: ["Tech Sharing"]
+categories: ["Tech"]
 tags: ["2025", "AI", "Claude Code"]
 author: Jimmy
 description: Quick start guide to Claude Code Hooks for building your own automated task monitoring workflow
