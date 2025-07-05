@@ -7,6 +7,9 @@ author: Jimmy
 description: 快速入門 Claude Code Hooks 打造屬於你的自動任務監控流程
 lang: zh-tw
 page_id: claude_code_hooks
+image:
+  path: /img/posts/claude_code_hooks_page_3.webp
+  no_bg: true
 ---
 
 # Claude Code Hooks 介紹

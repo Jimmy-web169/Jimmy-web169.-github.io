@@ -7,6 +7,9 @@ author: Jimmy
 description: Quick start guide to Claude Code Hooks for building your own automated task monitoring workflow
 lang: en
 page_id: claude_code_hooks
+image:
+  path: /img/posts/claude_code_hooks_page_3.webp
+  no_bg: true
 ---
 
 # Introduction to Claude Code Hooks
